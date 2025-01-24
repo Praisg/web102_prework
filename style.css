@@ -73,3 +73,41 @@ button {
     margin: 1%;
     border-radius: 7px;
 }
+.stats-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+    flex-wrap: nowrap;  /* Prevent wrapping */
+}
+
+.stats-card {
+    background-color: #a8b0bc;
+    border-radius: 7px;
+    padding: 1%;
+    margin: 1%;
+    width: 30%;  /* Set fixed width percentage */
+    flex: 1;     /* Allow equal flex growth */
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+/* Ensure number displays are consistent */
+#num-contributions, 
+#total-raised, 
+#num-games {
+    font-size: 50px;
+    margin: 10px 0;
+    line-height: 1.2;
+}
+
+/* Add media query for mobile responsiveness */
+@media (max-width: 768px) {
+    .stats-container {
+        flex-direction: column;
+    }
+    .stats-card {
+        width: 90%;
+        margin: 10px auto;
+    }
+}transform:translateY(-2px);
